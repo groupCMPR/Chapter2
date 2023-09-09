@@ -1,4 +1,3 @@
-//Name: Vivian Huynh
 //Date: 9/6/2023
 //Description: Header file for Chapter 2 Assignment Option 1 Quadratic Expression
 
