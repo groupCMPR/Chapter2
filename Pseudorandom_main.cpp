@@ -160,8 +160,8 @@ void experiment_range(Pseudorandom & p1) {
     cout << "\n\tmultiplier = " << p1.get_Multiplier() << ", increment = " << p1.get_Increment() << ", modulus = " << p1.get_Mod();
  
     //generates 1 million indirect numbers, the way it counts is by using order
-    //example: lets say we have number 0.1, when we multiply by 10 we get 1, and that is the order of the array
-    //example: 0.873 * 10 = 8.73, int truncates .73, order = 8, count_Occur[8] = adds one more (occurance)
+    //order example: lets say we have number 0.1, when we multiply by 10 we get 1, and that is the order of the array
+    //order example: 0.873 * 10 = 8.73, int truncates .73, order = 8, count_Occur[8] = adds one more (occurance)
     for (int i = 0; i < 1000000; i++) {
         p1.set_Next_Num();
         order = static_cast<int>(p1.get_Indirect_Num() * 10);
