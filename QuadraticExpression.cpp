@@ -1,4 +1,3 @@
-//Name: Vivian Huynh
 //Date: 9/6/2023
 //Description: cpp file for Chapter 2 Assignment Option 1 Quadratic Expression
 
@@ -52,7 +51,7 @@ void QuadraticExpression::setCCoefficient(int newC)
 }
 void QuadraticExpression::setX(int newX)
 {
-	newX = (aCoefficient * (pow(newX, 2))) + (bCoefficient * newX) + cCoefficient;
+	newX = (aCoefficient * (pow(newX, 2))) + (bCoefficient * newX) + cCoefficient; //check if this works. if not, move to the accessor function. 
 	x = newX;
 }
 
