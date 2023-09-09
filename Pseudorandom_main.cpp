@@ -20,8 +20,8 @@ void change_increment(Pseudorandom& p1); //set increment
 void display_next(Pseudorandom & p1); //get next number
 void display_indirect(Pseudorandom & p1); //get indirect number
 void experiment_range(Pseudorandom& p1); //display pseudocode with different values 
-double median_func_calc(const Pseudorandom& p1, const int& MAX_SIZE, const double* numberArray); //to calculate median
-double standard_deviation_func(const Pseudorandom& p1, const int& MAX_SIZE, const double * numberArray, const double & sum); //to calculate standard deviation
+double median_func_calc(const int & MAX_SIZE, const double * numberArray); //to calculate median
+double standard_deviation_func(const int & MAX_SIZE, const double * numberArray, const double & sum); //to calculate standard deviation
 
 
 
@@ -187,16 +187,16 @@ void experiment_range(Pseudorandom & p1) {
     }
 
     //gets median, standard deviation, then uses equation from project 14 in textbook
-    double median = median_func_calc(p1, GAUSSIAN_SIZE, gaussianNumbers); 
-    double standardDev = standard_deviation_func(p1, GAUSSIAN_SIZE, gaussianNumbers, sum);
+    double median = median_func_calc(GAUSSIAN_SIZE, gaussianNumbers); 
+    double standardDev = standard_deviation_func(GAUSSIAN_SIZE, gaussianNumbers, sum);
     double result = (median + (sum - 6) * standardDev);
 
     //displays
-   cout << "\n\t  With 10 uniformly distributed rand number in the range[0...1.0), \n\tthe approximate Gaussian distribution is" << result;
+   cout << "\n\tWith 10 uniformly distributed rand number in the range[0...1.0), \n\tthe approximate Gaussian distribution is " << result;
 }
 
 //calculates Median, used in other following functions
-double median_func_calc(const Pseudorandom & p1, const int & MAX_SIZE, const double * numberArray) {
+double median_func_calc(const int & MAX_SIZE, const double * numberArray) {
     double middle = 0;
     int middle_length = (MAX_SIZE / 2); //gets half length, if odd truncates decimal (should still be correct number bc arrays start from 0)
 
@@ -211,7 +211,7 @@ double median_func_calc(const Pseudorandom & p1, const int & MAX_SIZE, const dou
 
 
 //calculates standard dev, used in other following functions
-double standard_deviation_func(const Pseudorandom & p1, const int & MAX_SIZE, const double * numberArray, const double & sum) {
+double standard_deviation_func(const int & MAX_SIZE, const double * numberArray, const double & sum) {
 
     double mean = (sum / MAX_SIZE) * 1.0; //gets mean
 
