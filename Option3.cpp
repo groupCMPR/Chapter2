@@ -26,7 +26,8 @@ int main() {
 
 	return EXIT_SUCCESS;
 }
-
+//Precondition: None
+//PostCondition: Displays menu to user and returns a char
 char menuOption() {
 	cout << "\n\tCMPR131 Chapter2 - ADT Assignments by Alexis Martinez (9/6/2023)";
 	cout << "\n\t" << string(100, char(205));
@@ -38,7 +39,8 @@ char menuOption() {
 	cout << "\n\t" << string(100, char(205));
 	return inputChar("\n\t\tOption: ", static_cast<string>("123X"));
 }
-
+//PreCondition: None
+//PostCOndition: Performs mutliple tasks based on user choice 
 void caseThree() {
 	Rational r1;
 	Rational r2;
@@ -145,7 +147,8 @@ void caseThree() {
 	} while (true);
 
 }
-
+//Precondition: None
+//PostCondition: Displays menu to user and returns a char
 char caseThreeMenu() {
 	cout << "\n\t3> Rational Number menu";
 	cout << "\n\t" << string(100, char(205));
