@@ -1,42 +1,40 @@
+//Names: Angie Campos & Vivian Huynh
 //Date: 9/6/2023
-//Description: Header file for Chapter 2 Assignment Option 1 Quadratic Expression
+//Description: //Header File for the class of Quadratic Expressions: The class will get values of the coefficients
+//		       	 and it will calculate the discriminant of the equation, as to count the number of roots
+//				 and display its root(s) values. 
 
-#include <iostream>
+#include <iostream> //For cout and cin
+#include <iomanip>  //For setprecision
+#include <string>   //For string
 using namespace std;
 
 #pragma once
 class QuadraticExpression
 {
 private:
-	int aCoefficient; //-100 through 100
-	int bCoefficient;
-	int cCoefficient;
-	int x;			  
+	double aCoefficient; //For varible a to contain values -100.0 through 100.0
+	double bCoefficient; //For varible b to contain values -100.0 through 100.0
+	double cCoefficient; //For varible c to contain values -100.0 through 100.0
 
 public:
 	//CONSTRUCTOR
-	QuadraticExpression();
+	QuadraticExpression(); //Default
 
 	//ACCESSORS
-	int getACoefficient() const; 
-	int getBCoefficient() const;
-	int getCCoefficient() const;
-	int getX() const;
-	int getNumberRealNumbers() const;
-	int getRealNumbers() const;
+	double getACoefficient() const;
+	double getBCoefficient() const;
+	double getCCoefficient() const;
+	double solveForY(double) const; 
+	double calculateDiscriminant() const;
+	string countRealRoots() const;
 
 	//MUTATORS
-	void setACoefficient(int newA);
-	void setBCoefficient(int newB);
-	void setCCoefficient(int newC);
-	void setX(int newX);
+	void setACoefficient(double);
+	void setBCoefficient(double);
+	void setCCoefficient(double);
+	void displayRoots();
 
-	//OVERLOADING OPERATORS
-	//QuadraticExpression operator + (const QuadraticExpression& number1, const QuadraticExpression& number2);
-	//QuadraticExpression operator * (double r, const QuadraticExpression& number);
-	QuadraticExpression operator + (const QuadraticExpression&);
-	QuadraticExpression operator * (const QuadraticExpression&);
-
-	//FRIENDS
-	friend ostream& operator<<(ostream& out, const QuadraticExpression& obj);
+	//FRIEND
+	friend ostream& operator<<(ostream&, const QuadraticExpression&);
 };
