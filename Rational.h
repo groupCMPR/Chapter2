@@ -32,7 +32,7 @@ public:
     Rational();
     //converts to string
     string toString();
-    // will throw and exception
+    // will throw an exception
     Rational(int, int);
 
     //getter for numerator
