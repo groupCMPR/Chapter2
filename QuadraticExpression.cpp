@@ -126,11 +126,11 @@ void QuadraticExpression::displayRoots()
 		//Outputting the largest number first
 		if (root1 > root2)
 		{
-			cout << fixed << setprecision(4) << "\n\tThe two real roots are: " << root1 << " , " << root2 << '\n';
+			cout << setprecision(4) << "\n\tThe two real roots are: " << root1 << " , " << root2 << '\n';
 		}
 		else
 		{
-			cout << fixed << setprecision(4) << "\n\tThe two real roots are: " << root2 << " , " << root1 << '\n';
+			cout << setprecision(4) << "\n\tThe two real roots are: " << root2 << " , " << root1 << '\n';
 		}
 	}
 	else if (discriminant == 0)
@@ -146,8 +146,8 @@ void QuadraticExpression::displayRoots()
 		imaginary = sqrt(-discriminant) / (2 * aCoefficient);
 		real = -bCoefficient / (2 * aCoefficient);
 
-		cout << fixed << setprecision(4) << "\n\tThe 1st complex root is: " << real << " + " << imaginary << "i";
-		cout << fixed << setprecision(4) << "\n\tThe 2nd complex root is: " << real << " - " << imaginary << "i\n";
+		cout << setprecision(4) << "\n\tThe 1st complex root is: " << real << " + " << imaginary << "i";
+		cout << setprecision(4) << "\n\tThe 2nd complex root is: " << real << " - " << imaginary << "i\n";
 	}
 }
 
