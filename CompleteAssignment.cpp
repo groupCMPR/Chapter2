@@ -334,7 +334,7 @@ void caseThree() {
 			}
 			catch (Rational::ZeroDenominator& e)
 			{
-				cout << "\n\tEXCEPTION ERROR: Cannot push a Rational number, " << e.toString() << ", with a zero denominator value.";
+				cout << "\n\tEXCEPTION ERROR: Cannot use Rational number, " << e.toString() << ", with a zero denominator value.";
 				optionAFlag = false;
 			}
 
@@ -357,7 +357,7 @@ void caseThree() {
 			}
 			catch (Rational::ZeroDenominator& e)
 			{
-				cout << "\n\tEXCEPTION ERROR: Cannot push a Rational number, " << e.toString() << ", with a zero denominator value.";
+				cout << "\n\tEXCEPTION ERROR: Cannot use Rational number, " << e.toString() << ", with a zero denominator value.";
 				optionCFlag = false;
 			}
 
